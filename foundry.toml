@@ -2,8 +2,10 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+# add more contract to show gas reports
+gas_reports = ["Counter.sol"]
 
-remappings = ["@openzeppelin/=lib/openzeppelin-contracts/contracts/"]
+remappings = ["@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/"]
 
 [rpc_endpoints]
 mainnet = "${MAINNET_RPC_URL}"
