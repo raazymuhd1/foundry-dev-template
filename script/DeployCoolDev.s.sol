@@ -2,17 +2,18 @@
 pragma solidity ^0.8.13;
 
 import {Script, console} from "forge-std/Script.sol";
-import {Counter} from "../src/Counter.sol";
+import {CoolDev} from "../src/CoolDev.sol";
 
-contract CounterScript is Script {
-    Counter public counter;
+contract DeployCoolDev is Script {
+    CoolDev public coolDev;
 
     function setUp() public {}
 
     function run() public {
         vm.startBroadcast();
 
-        counter = new Counter();
+        coolDev = new CoolDev("CoolDev", "CD");
+        console.log(address(coolDev));
 
         vm.stopBroadcast();
     }

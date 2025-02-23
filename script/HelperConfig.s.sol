@@ -3,9 +3,7 @@ pragma solidity ^0.8.20;
 
 contract HelperConfig {
 
-    struct networkConfig {
-        
-    }
+
 
     function deployMainnet() public {
         

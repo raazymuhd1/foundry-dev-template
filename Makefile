@@ -2,6 +2,13 @@ include .env
 
 deploy-mainnet:; forge script script/DeployTest:DeployTest.s.sol --rpc-url $(MAINNET_RPC_URL) --private-key $(PRIVATE_KEY) --verify $(ETHERSCAN_API_KEY) --broadcast -vvvvv
 
+verifying:; forge verify-contract \
+    --rpc-url $(MONAD_TESTNET) \
+    --verifier sourcify \
+    --verifier-url https://sourcify-api-monad.blockvision.org \
+     0xe4c8e73E74dA4a1ad8B3a900f76C6911D01adf8d \
+    src/CoolDev.sol:CoolDev \
+
 # gas snapshot
 snapshot:; forge snapshot
 
@@ -12,7 +19,7 @@ build:; forge build
 clean:; forge clean
 
 # formatting sol code
-fmt:; forge fmt src/Counter.sol
+fmt:; forge fmt src/CoolDev.sol
 
 # Display a tree visualization of the project’s dependency graph
 tree:; forge tree
