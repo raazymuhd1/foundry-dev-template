@@ -10,11 +10,11 @@ contract DeployCoolDev is Script {
     function setUp() public {}
 
     function run() public {
-        vm.startBroadcast();
+        // vm.startBroadcast();
 
-        coolDev = new CoolDev("CoolDev", "CD");
-        console.log(address(coolDev));
+        // coolDev = new CoolDev("CoolDev", "CD");
+        // console.log(address(coolDev));
 
-        vm.stopBroadcast();
+        // vm.stopBroadcast();
     }
 }

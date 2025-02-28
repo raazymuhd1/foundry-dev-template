@@ -6,7 +6,8 @@ libs = ["lib"]
 gas_reports = ["*"]
 
 remappings = [
-    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/", "@openzeppelin/upgradeable-contracts/=lib/openzeppelin-contracts-upgradeable/contracts/"
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/", "@openzeppelin/upgradeable-contracts/=lib/openzeppelin-contracts-upgradeable/contracts/",
+    "@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/"
 ]
 
 [rpc_endpoints]

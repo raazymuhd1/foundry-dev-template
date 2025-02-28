@@ -8,9 +8,14 @@ import { ERC20Upgradeable } from "@openzeppelin/upgradeable-contracts/token/ERC2
 import {OwnableUpgradeable } from "@openzeppelin/upgradeable-contracts/access/OwnableUpgradeable.sol";
 
 contract CoolDev is ERC20Upgradeable, OwnableUpgradeable {
-    constructor(string memory name_, string memory symbol_) ERC20Upgradeable(name_, symbol_) OwnableUpgradeable(msg.sender) {
+
+    constructor() {
         // reinitializers is disabled, preventing any future initialization
         _disableInitializers();
+    }
+
+    function initialized(string memory name_, string memory symbol_, uint256 supply_) external onlyInitializing {
+        
     }
 
     function issuance(uint256 amount, address to) external onlyOwner {
